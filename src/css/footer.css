@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: montregular;
+}
+@font-face {
+  font-family: montregular;
+  src: url(../fonts/Montserrat-Regular.ttf);
+} 
+.main-div{
+  background-color:rgb(25,31,92);
+  width: 292.47px;
+  height: 68.23px;
+  margin: auto;
+  border-radius: 54px;
+  padding: 6px;
+  
+}
+.div-home,.div-account,.div-course,.div-contact{
+  width: 40px;
+  height: 40px;
+  display: inline-block ;
+  margin: 13px 16.4px;
+  
+}
+.icon{
+  padding: 2px 3px;
+  margin-top: 2px;
+}
+.div-home :hover .icon,.div-account :hover .icon,.div-course :hover .icon ,.div-contact :hover .icon{
+  border-bottom: 2px solid #F6BE1D;
+  fill: #F6BE1D;
+}
+a.active .icon {
+  padding: 2px 2px;
+  margin-top: 2px;
+  color:#F6BE1D ;
+  border-bottom: 2px solid #F6BE1D;
+  fill: #F6BE1D;
+}

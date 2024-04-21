@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: montregular;
+}
+@font-face {
+    font-family: montregular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+} 
+p.acount-text{
+    font-weight: 700 ;
+    color:  rgb(25,31,92);
+    font-size:25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.account-icon{
+    width: 160px;
+    margin: auto;
+}
+.account-details{
+    width: 350px;
+    height: 138px;
+    margin: auto;
+    margin-bottom: 71px;
+}
+p.name,p.phone,p.email{
+    display: inline;
+    color:rgb(25,31,92);
+    font-weight: 700;
+    font-size: 17px;
+}
+.text-acc-details{
+    width:350px;
+}
+span.name{
+    margin-left: 10px;
+    color:rgb(25,31,92);
+}
+span.email{
+    margin-left: 14px;
+    color:rgb(25,31,92);
+}
+span.phone{
+    margin-left: 7px;
+    color:rgb(25,31,92);
+}
+span.name::before,span.email::before,span.phone::before{
+    content:": ";
+    color: rgb(25,31,92);
+    font-weight: 700;
+}
+.bottom-headder{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

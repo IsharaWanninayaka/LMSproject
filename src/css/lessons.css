@@ -1,0 +1,173 @@
+.lesson-holi-img2{
+    margin-top: -1px;
+    float: left; 
+}
+
+.lesson-title-box-2{
+    text-align: center;
+    margin: auto;
+    margin-right: 90px;
+    padding-top: 1px;
+}
+
+.lesson-title-name-1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: montregular;
+    margin: auto;
+    
+}
+
+.lesson-title-name-2{
+    text-align: center;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family: montregular;
+    font-weight: lighter;
+    margin: auto;
+    padding-top: 1px;
+}
+
+.btn-box-les{ /*Content main div lesson01)*/
+    text-align: center;
+    margin-top: 130px;
+    margin-left: 0px;
+    position: fixed;
+}
+.btn-les{
+    background-color: #191f5c;
+    color: #ffffff;
+    height: 45px;
+    width: 240px;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 70px;
+    border-radius: 40px; 
+    margin-bottom: 3px; 
+    font-size: 13px;
+    font-family: montregular;
+    margin-top: -140px;
+    margin-left: 20px;
+    
+}
+
+
+
+.num-box-01{ /*Title Number box div tag*/
+    margin-top: -44px;
+    display: flex;
+    flex-direction: column;
+}
+
+.num_btn-01{ /*Title Number box 01*/
+    height: 37px;
+    width: 58px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    color: #191f5c;
+    border: none;
+    font-size: 28px;
+    font-family: montbold;
+    margin-left: 27.5px;
+    margin-bottom: 11px;
+}
+
+.topic-box{   /*Topic box div tag*/
+    text-align: center;
+    margin-top: 75px;
+    flex-direction: column;
+}
+
+.topic-btn{   /*Topic boxes*/
+    background-color: #191f5c;
+    color: #ffffff;
+    height: 30px;
+    width: 300px;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 64px;
+    border-radius: 40px; 
+    margin-bottom: 3px; 
+    font-family: montregular;
+    font-size: 13px;
+}
+
+.topic-num-box{  /*Topic Number box div tag*/
+    margin-top: -330px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topic-num-btn{    /*Topic Number boxes*/
+    height: 23px;
+    width: 52px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    color: #191f5c;
+    border: none;
+    font-size: 20px;
+    font-family: montbold;
+    margin-left: 41px;
+    margin-bottom: 10px;
+}
+
+.topic-card-box{  /*Topic fee card box div tag*/
+    margin-top: -326.5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topic-card-btn{  /*Topic fee card boxes*/
+    height: 23px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    color: #191f5c;
+    border: none;
+    font-size: 19px;
+    font-family: montbold;
+    margin-left: 274.6px;
+    margin-bottom: 10px;
+}
+
+.price-box{ /* price button div tag */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.price-btn{  /* price button */
+    height: 27px;
+    width: 122px;
+    border-radius: 30px;
+    background-color:#191f5c;
+    color: #ffffff;
+    border: none;
+    font-size: 13px;
+    font-family: montbold;
+    padding-left: 22px;
+}
+
+#arro-cir{ /*price button white circle */
+    top: 546px;
+    left: 128px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    transition: .5s;
+    border: 1px solid#191f5c;
+}
+
+.arro-price{ /* price button arror icon*/
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    margin-left: 131.4px;
+    margin-top: -23px;
+    
+    
+}
