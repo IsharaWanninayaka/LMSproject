@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <div className="wrapper">
       <div className='main'>
-        <p className='text-contact'>contact us</p>
+        <p className='bg-amber-600'>contact us</p>
         <div className='contact-no'>
           <div className='contact-no-icon'>
             <MdAddCall size={30}/>
