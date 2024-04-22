@@ -18,7 +18,7 @@ export default function Home() {
           </div>
 
           <div className="title-boxx-2">
-            <p className="title-namee-1">YOUR GATEWAY TO </p>
+            <p className="title-namee1">YOUR GATEWAY TO </p>
             <p className="title-namee-2">INTERACTIVE EDUCATION</p>
           </div>
         </div>

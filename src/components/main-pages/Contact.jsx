@@ -10,8 +10,8 @@ import { MdAddCall } from "react-icons/md";
 export default function Contact() {
   return (
     <div className="wrapper">
-      <div className='main'>
-        <p className='bg-amber-600'>contact us</p>
+      <div className='w-full bg-blue-950 h-16'>
+        <p className=''>contact us</p>
         <div className='contact-no'>
           <div className='contact-no-icon'>
             <MdAddCall size={30}/>
