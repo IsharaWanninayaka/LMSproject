@@ -18,8 +18,8 @@ export default function Home() {
           </div>
 
           <div className="title-boxx-2">
-            <p className="title-namee1">YOUR GATEWAY TO </p>
-            <p className="title-namee-2">INTERACTIVE EDUCATION</p>
+            <p className="title-namee1 font-montserat">YOUR GATEWAY TO </p>
+            <p className="title-namee-2 font-montserat">INTERACTIVE EDUCATION</p>
           </div>
         </div>
 
@@ -29,11 +29,11 @@ export default function Home() {
               <p>01</p>
             </div>
             <div className="text">
-              <p>User-Friendly Interface</p>
+              <p className="font-montserat">User-Friendly Interface</p>
             </div>
           </div>
           <div className="description">
-            <p>
+            <p className="font-montserat">
               The website should have an intuitive design that makes it easy for
               user to navigate and access course materials.
             </p>
@@ -46,11 +46,11 @@ export default function Home() {
               <p>02</p>
             </div>
             <div className="text">
-              <p>Diverse Course Offerings</p>
+              <p className="font-montserat">Diverse Course Offerings</p>
             </div>
           </div>
           <div className="description">
-            <p>
+            <p className="font-montserat">
               Provide a wide range of courses covering various subject and skill
               levels to cater to different interests and learning needs.
             </p>
@@ -63,11 +63,11 @@ export default function Home() {
               <p>03</p>
             </div>
             <div className="text">
-              <p>Interactive Learning Tools</p>
+              <p className="font-montserat">Interactive Learning Tools</p>
             </div>
           </div>
           <div className="description">
-            <p>
+            <p className="font-montserat">
               Incorporate interactive elements such as qizzes,similations and
               multimeadia content to enhance engagement and learning outcomes.
             </p>

@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: montregular;
 }
 *{
     text-decoration: none;
@@ -30,20 +29,18 @@
 }
 .title-name-1{
     text-align: center;
-    font-size: 30px; 
+    font-size: 20px; 
     font-weight: bold;
     color: #FFFFFF;
-    font-family: montregular;
-     margin: auto;
+    margin: auto;
+    padding-top: 7.59px;
+     
 }
 .title-name-2{
     text-align: center;
-    font-size: 20px;
+    font-size: 14px;
     color: #FFFFFF;
-    font-family: montregular;
-    font-weight: lighter;
     margin: auto;
-    margin-top: -11px;
 }
 
 .holi-image1{
@@ -77,14 +74,12 @@
 
 .content-name-1{
     color: #FFFFFF;
-    font-family: montregular;
     font-weight: bold;
     font-size: 24px;
 }
 
 .content-name-2{
     color: #FFFFFF;
-    font-family: montregular;
     font-weight: lighter;
     font-size: 20px;
 }

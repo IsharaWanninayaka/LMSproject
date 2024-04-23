@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: montregular;
 }
 .wrapper{
     width: 100%; 
@@ -42,7 +41,6 @@
     color:  rgb(25,31,92);
     font-weight: bold;
     font-size: 16px;
-    font-family: montregular;
     margin: 3px 3px;
 }
 .text{
@@ -98,7 +96,6 @@
     font-size: 20px; 
     font-weight: bold;
     color: #FFFFFF;
-    font-family: montregular;
     margin: auto;
     padding-top: 7.59px;
 
@@ -107,7 +104,6 @@
     text-align: center;
     font-size: 14px;
     color: #FFFFFF;
-    font-family: montregular;
     font-weight: lighter;
     margin: auto;
     

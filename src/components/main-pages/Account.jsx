@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from './Footer';
-import '../../css/account.css';
 //react icons
 import { RiAccountCircleLine } from "react-icons/ri";
 
