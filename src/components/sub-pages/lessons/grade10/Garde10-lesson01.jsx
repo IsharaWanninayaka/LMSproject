@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../../css/lessons.css';
-import '../../../../css/grade10main.css';
+//import '../../../../css/grade10main.css';
 import register_icon from '../../../../images/Register_icon.png';
 import Holi1 from '../../../../images/Holi 1.png';
 import Holi2 from '../../../../images/Holi 2.png';
