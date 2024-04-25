@@ -17,8 +17,8 @@ function grade10main() {
         </div>
 
         <div className='basis-3/5'>
-          <p className='mt-[7.59px] text-center text-white text-[20px] font-bold font-montserat'>CONTACT US</p>
-          <p className='mt-[1px] text-center text-white text-[14px] font-light '>GET IN TOUCH EASILY</p>
+          <p className='mt-[1px] text-center text-white text-[30px] font-bold font-montserat'> GRADE 10</p>
+          <p className='mt-[-5px] text-center text-white text-[20px] font-light '>LESSONS</p>
         </div>
 
         <div className=' basis-1/5'>
@@ -33,47 +33,47 @@ function grade10main() {
 
               <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>01</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Programming - ක්‍රමලේඛණය</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[7px] text-[9px] ml-14'>Information and Communication - තොරතුරු හා සන්නිවේදන තාක්ෂණය</p></Link></div>
                
               </div>
               <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>02</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>System Development Life Cycle</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[7px] text-[9px] ml-14'>Fundamentals of a computer system - පරිගණක පද්ධතියක මූලික කරුණු </p></Link></div>
                
               </div>
               <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>03</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>The Internet and the Electronic Mail</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[7px] text-[9px] ml-14'>Data Representation Methods in the Computer system - පරිගණක පද්ධතියේ දත්ත නියෝජන ක්‍රම</p></Link></div>
                
               </div>
               <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>04</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Use of Multimedia</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[7px] text-[9px] ml-14'>Logic Gates with Boolean Functions - බූලියන් කාර්යයන් සහිත තාර්කික ද්වාර</p></Link></div>
                
               </div>
-              <div className=" w-[256px] bg-[rgb(25,31,92)] h-[37px]  rounded-[39px]  mt-4 ">
+              <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>05</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Web Designing Using Multimedia</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Operating Systems - මෙහෙයුම් පද්ධති</p></Link></div>
                
               </div>
-              <div className=" w-[256px] bg-[rgb(25,31,92)] h-[37px]  rounded-[39px]  mt-4 ">
+              <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>06</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Information & communication Technology & Society</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Word Processing - වචන සැකසීම</p></Link></div>
                
               </div>
-              <div className=" w-[256px] bg-[rgb(25,31,92)] h-[37px]  rounded-[39px]  mt-4 ">
+              <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>07</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Information & communication Technology & Society</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[7px] text-[9px] ml-14'>Electronic Spreadsheet - ඉලෙක්ට්‍රොනික පැතුරුම්පත්</p></Link></div>
                
               </div>
-              <div className=" w-[256px] bg-[rgb(25,31,92)] h-[37px]  rounded-[39px]  mt-4 ">
+              <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>08</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Information & communication Technology & Society</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[7px] text-[9px] ml-14'>Electronic Presentations - ඉලෙක්ට්‍රොනික පැතුරුම්පත්</p></Link></div>
                
               </div>
-              <div className=" w-[256px] bg-[rgb(25,31,92)] h-[37px]  rounded-[39px]  mt-4 ">
+              <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[32px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>09</p></div>
-                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Information & communication Technology & Society</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10main/lesson01' className=''><p className='mt-[11px] text-[9px] ml-14'>Database - ඉලෙක්ට්‍රොනික ඉදිරිපත් කිරීම්</p></Link></div>
                
               </div>
              
