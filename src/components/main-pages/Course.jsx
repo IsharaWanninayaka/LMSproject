@@ -6,6 +6,7 @@ import Holi1 from '../../images/Holi 1.png';
 import Holi2 from '../../images/Holi 2.png';
 import content1 from '../../images/Course Sinhala.png';
 //import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function Course() {
   return (
@@ -16,8 +17,8 @@ export default function Course() {
         </div>
 
         <div className='basis-3/5'>
-          <p className='mt-[7.59px] text-center text-white text-[20px] font-bold font-montserat' >YOUR COURSES</p>
-          <p className='mt-[1px] text-center text-white text-[14px] font-light '>LEARN WITH EASE</p>
+          <p className='mt-[7.59px] text-center text-white text-[20px] font-bold font-montserat' >COURSES</p>
+          <p className='mt-[1px] text-center text-white text-[14px] font-light '>SINHALA</p>
         </div>
 
         <div className=' basis-1/5'>
@@ -28,27 +29,32 @@ export default function Course() {
         
       <div className='w-[238px] m-auto realtive pt-20 h-[976px]'>  
         <div className='content-box'>
+          <Link to='/course/grade10main'>
+            <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
+            <p className='content-name-1 font-montserat'>GRADE 10</p>
+            <p className='leading-5 content-name-2 font-montserat'>THEORY</p>
+          </Link>
+        </div>
+
+        <div className='content-box'>
+          <Link to='/course/grade11main'>
             <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
             <p className='content-name-1 font-montserat'>GRADE 10</p>
             <p className='content-name-2 font-montserat'>THEORY</p>
         </div>
 
         <div className='content-box'>
+        <Link to='/course/revisionmain'>
             <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
-            <p className='content-name-1 font-montserat'>GRADE 11</p>
+            <p className='content-name-1 font-montserat'>GRADE 10</p>
             <p className='content-name-2 font-montserat'>THEORY</p>
         </div>
 
         <div className='content-box'>
+         <Link to='/course/pastpapermain'>
             <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
-            <p className='content-name-1 font-montserat'>REVISION</p>
-            <p className='content-name-2 font-montserat'>GRADE 10/11</p>
-        </div>
-
-        <div className='content-box'>
-            <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
-            <p className='content-name-1 font-montserat'>PAST PAPER</p>
-            <p className='content-name-2 font-montserat'>DISCUSSION</p>
+            <p className='content-name-1 font-montserat'>GRADE 10</p>
+            <p className='content-name-2 font-montserat'>THEORY</p>
         </div>
       </div> 
       
