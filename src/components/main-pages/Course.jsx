@@ -29,27 +29,35 @@ export default function Course() {
         
       <div className='w-[238px] m-auto realtive pt-20 h-[976px]'>  
         <div className='content-box'>
-            <div className=''><Link to='/course/grade10main'><img src={content1} alt='content1' className='content-img'></img></Link></div>
+          <Link to='/course/grade10main'>
+            <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
             <p className='content-name-1 font-montserat'>GRADE 10</p>
             <p className='leading-5 content-name-2 font-montserat'>THEORY</p>
+          </Link>
         </div>
 
         <div className='content-box'>
-            <div className=''><Link to='/course/grade11main'><img src={content1} alt='content1' className='content-img'></img></Link></div>
+          <Link to='/course/grade11main'>
+            <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
             <p className='content-name-1 font-montserat'>GRADE 11</p>
             <p className='leading-5 content-name-2 font-montserat'>THEORY</p>
+          </Link>
         </div>
 
         <div className='content-box'>
+        <Link to='/course/revisionmain'>
             <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
             <p className='content-name-1 font-montserat'>REVISION</p>
             <p className='leading-5 content-name-2 font-montserat'>GRADE 10/11</p>
+            </Link>
         </div>
 
         <div className='content-box'>
+         <Link to='/course/pastpapermain'>
             <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
             <p className='content-name-1 font-montserat'>PAST PAPER</p>
             <p className='leading-5 content-name-2 font-montserat'>DISCUSSION</p>
+            </Link>
         </div>
       </div> 
       

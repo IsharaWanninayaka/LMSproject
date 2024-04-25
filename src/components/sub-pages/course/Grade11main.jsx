@@ -6,7 +6,7 @@ import holi2 from '../../../images/Holi 2.png';
 
 
 
-function grade10main() {
+function grade11main() {
   return (
   
 <div className="wrapper">
@@ -32,7 +32,7 @@ function grade10main() {
 
               <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[33.5px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>01</p></div>
-                <div className='text-white '><Link to='/grade10lesson1' className=''><p className='mt-[12px] text-[9px] ml-13'>Programming - ක්‍රමලේඛනය </p></Link></div>
+                <div className='text-white '><Link to='/grade11lesson1' className=''><p className='mt-[12px] text-[9px] ml-13'>Programming - ක්‍රමලේඛනය </p></Link></div>
                
               </div>
               <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
@@ -72,4 +72,4 @@ function grade10main() {
   </div>) 
 }
 
-export default grade10main
+export default grade11main
