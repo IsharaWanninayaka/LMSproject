@@ -31,25 +31,25 @@ export default function Course() {
         <div className='content-box'>
             <div className=''><Link to='/course/grade10main'><img src={content1} alt='content1' className='content-img'></img></Link></div>
             <p className='content-name-1 font-montserat'>GRADE 10</p>
-            <p className='content-name-2 font-montserat'>THEORY</p>
+            <p className='leading-5 content-name-2 font-montserat'>THEORY</p>
+        </div>
+
+        <div className='content-box'>
+            <div className=''><Link to='/course/grade11main'><img src={content1} alt='content1' className='content-img'></img></Link></div>
+            <p className='content-name-1 font-montserat'>GRADE 11</p>
+            <p className='leading-5 content-name-2 font-montserat'>THEORY</p>
         </div>
 
         <div className='content-box'>
             <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
-            <p className='content-name-1 font-montserat'>GRADE 10</p>
-            <p className='content-name-2 font-montserat'>THEORY</p>
+            <p className='content-name-1 font-montserat'>REVISION</p>
+            <p className='leading-5 content-name-2 font-montserat'>GRADE 10/11</p>
         </div>
 
         <div className='content-box'>
             <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
-            <p className='content-name-1 font-montserat'>GRADE 10</p>
-            <p className='content-name-2 font-montserat'>THEORY</p>
-        </div>
-
-        <div className='content-box'>
-            <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
-            <p className='content-name-1 font-montserat'>GRADE 10</p>
-            <p className='content-name-2 font-montserat'>THEORY</p>
+            <p className='content-name-1 font-montserat'>PAST PAPER</p>
+            <p className='leading-5 content-name-2 font-montserat'>DISCUSSION</p>
         </div>
       </div> 
       

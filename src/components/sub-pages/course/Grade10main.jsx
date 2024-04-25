@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import Footer from '../../main-pages/Footer';
 import holi1 from '../../../images/Holi 1.png';
@@ -77,9 +76,6 @@ function grade10main() {
                
               </div>
              
-              
-            
-
       </div>
     </div>
           <div className='bottom-headder'>

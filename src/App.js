@@ -7,7 +7,9 @@ import Nopage from './components/main-pages/Nopage.jsx';
 import Register from './components/login-pages/Register.jsx';
 import Login from './components/login-pages/Login.jsx';
 import Grade10main from './components/sub-pages/course/Grade10main.jsx';
+import Grade11main from './components/sub-pages/course/Grade11main.jsx';
 import Grade10lesson01 from './components/sub-pages/lessons/grade10/Garde10-lesson01.jsx';
+
 
 import '../src/css/style.scss';
 
@@ -28,6 +30,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
 
         <Route path="/course/grade10main" element={<Grade10main />}></Route>
+        <Route path="/course/grade11main" element={<Grade11main />}></Route>
         <Route path="/grade10lesson1" element={<Grade10lesson01 />}></Route>
       </Routes>
     </BrowserRouter>
