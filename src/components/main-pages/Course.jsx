@@ -6,6 +6,7 @@ import Holi1 from '../../images/Holi 1.png';
 import Holi2 from '../../images/Holi 2.png';
 import content1 from '../../images/final 1.jpg';
 //import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function Course() {
   return (
@@ -28,7 +29,7 @@ export default function Course() {
         
       <div className='w-[238px] m-auto realtive pt-20 h-[976px]'>  
         <div className='content-box'>
-            <div className=''><img src={content1} alt='content1' className='content-img'></img></div>
+            <div className=''><Link to='/course/grade10main'><img src={content1} alt='content1' className='content-img'></img></Link></div>
             <p className='content-name-1 font-montserat'>GRADE 10</p>
             <p className='content-name-2 font-montserat'>THEORY</p>
         </div>
