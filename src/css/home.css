@@ -53,11 +53,11 @@
     font-size: 16px;
     margin-left: 1px;
     text-align: center;
-    padding-top: 6px;
+    padding-top: 4px;
     
 }
 .user-friendly{
-    margin-top: 42px;
+    margin-top: 21px;
     height: auto;
 }
 .description ,.diverse,.interactive{
@@ -104,7 +104,6 @@
     text-align: center;
     font-size: 14px;
     color: #FFFFFF;
-    font-weight: lighter;
     margin: auto;
     
 }

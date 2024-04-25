@@ -19,7 +19,7 @@ export default function Contact() {
 
         <div className='basis-3/5'>
           <p className='mt-[7.59px] text-center text-white text-[20px] font-bold font-montserat'>CONTACT US</p>
-          <p className='mt-[1px] text-center text-white text-[14px] font-light '>GET IN TOUCH EASILY</p>
+          <p className='mt-[1px] text-center text-white text-[14px] font-light font-montserat'>GET IN TOUCH EASILY</p>
         </div>
 
         <div className=' basis-1/5'>
