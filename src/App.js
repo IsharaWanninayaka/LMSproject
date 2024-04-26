@@ -68,15 +68,15 @@ function App() {
         <Route path="/course/revisionmain" element={<Revisionmain />}></Route>
         <Route path="/course/pastpapermain" element={<Pastpapermain />}></Route>
  
-        <Route path="/grade10lesson1" element={<Grade10lesson01 />}></Route>
-        <Route path="/grade10lesson2" element={<Grade10lesson02 />}></Route>
-        <Route path="/grade10lesson3" element={<Grade10lesson03 />}></Route>
-        <Route path="/grade10lesson4" element={<Grade10lesson04 />}></Route>
-        <Route path="/grade10lesson5" element={<Grade10lesson05 />}></Route>
-        <Route path="/grade10lesson6" element={<Grade10lesson06 />}></Route>
-        <Route path="/grade10lesson7" element={<Grade10lesson07 />}></Route>
-        <Route path="/grade10lesson8" element={<Grade10lesson08 />}></Route>
-        <Route path="/grade10lesson9" element={<Grade10lesson09 />}></Route>
+        <Route path="/course/grade10lesson1" element={<Grade10lesson01 />}></Route>
+        <Route path="/course/grade10lesson2" element={<Grade10lesson02 />}></Route>
+        <Route path="/course/grade10lesson3" element={<Grade10lesson03 />}></Route>
+        <Route path="/course/grade10lesson4" element={<Grade10lesson04 />}></Route>
+        <Route path="/course/grade10lesson5" element={<Grade10lesson05 />}></Route>
+        <Route path="/course/grade10lesson6" element={<Grade10lesson06 />}></Route>
+        <Route path="/course/grade10lesson7" element={<Grade10lesson07 />}></Route>
+        <Route path="/course/grade10lesson8" element={<Grade10lesson08 />}></Route>
+        <Route path="/course/grade10lesson9" element={<Grade10lesson09 />}></Route>
 
 
         <Route path="/grade11lesson1" element={<Grade11lesson01 />}></Route>
