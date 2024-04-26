@@ -72,7 +72,7 @@ function grade10main() {
 
               <div className=" w-[266px] bg-[rgb(25,31,92)] h-[39px]  rounded-[39px]  mt-4 ">
                 <div className='float-left w-[44px] h-[33px] bg-white text-[rgb(25,31,92)]  rounded-[39px]  m-[3px]  '><p className='ml-[7px] mt-[-2px] text-[24px]'>09</p></div>
-                <div className='text-white '><Link to='/course/grade10lesson99' className=''><p className='mt-[11px] text-[9px] ml-14'>Database - ඉලෙක්ට්‍රොනික ඉදිරිපත් කිරීම්</p></Link></div>
+                <div className='text-white '><Link to='/course/grade10lesson9' className=''><p className='mt-[11px] text-[9px] ml-14'>Database - ඉලෙක්ට්‍රොනික ඉදිරිපත් කිරීම්</p></Link></div>
               </div>
 
       </div>

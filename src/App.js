@@ -79,12 +79,12 @@ function App() {
         <Route path="/course/grade10lesson9" element={<Grade10lesson09 />}></Route>
 
 
-        <Route path="/grade11lesson1" element={<Grade11lesson01 />}></Route>
-        <Route path="/grade11lesson2" element={<Grade11lesson02/>}></Route>
-        <Route path="/grade11lesson3" element={<Grade11lesson03 />}></Route>
-        <Route path="/grade11lesson4" element={<Grade11lesson04 />}></Route>
-        <Route path="/grade11lesson5" element={<Grade11lesson05 />}></Route>
-        <Route path="/grade11lesson6" element={<Grade11lesson06 />}></Route>
+        <Route path="/course/grade11lesson1" element={<Grade11lesson01 />}></Route>
+        <Route path="/course/grade11lesson2" element={<Grade11lesson02/>}></Route>
+        <Route path="/course/grade11lesson3" element={<Grade11lesson03 />}></Route>
+        <Route path="/course/grade11lesson4" element={<Grade11lesson04 />}></Route>
+        <Route path="/course/grade11lesson5" element={<Grade11lesson05 />}></Route>
+        <Route path="/course/grade11lesson6" element={<Grade11lesson06 />}></Route>
 
         <Route path="/revisionlesson01" element={<Revisionlesson01/>}></Route>
         <Route path="/revisionlesson02" element={<Revisionlesson02/>}></Route>
