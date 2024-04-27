@@ -41,6 +41,15 @@ import Revisionlesson07 from './components/sub-pages/lessons/revision/Revisionle
 import Revisionlesson08 from './components/sub-pages/lessons/revision/Revisionlesson08.jsx';
 import Revisionlesson09 from './components/sub-pages/lessons/revision/Revisionlesson09.jsx';
 
+import P2017 from './components/sub-pages/lessons/pastpaper/P2017.jsx';
+import P2018 from './components/sub-pages/lessons/pastpaper/P2018.jsx';
+import P2019 from './components/sub-pages/lessons/pastpaper/P2019.jsx';
+import P2020 from './components/sub-pages/lessons/pastpaper/P2020.jsx';
+import P2021 from './components/sub-pages/lessons/pastpaper/P2021.jsx';
+import P2022 from './components/sub-pages/lessons/pastpaper/P2022.jsx';
+import P2023 from './components/sub-pages/lessons/pastpaper/P2023.jsx';
+
+
 
 
 
@@ -96,8 +105,14 @@ function App() {
         <Route path="/course/revisionlesson08" element={<Revisionlesson08/>}></Route>
         <Route path="/course/revisionlesson09" element={<Revisionlesson09/>}></Route>
 
+        <Route path="/course/P2017" element={<P2017/>}></Route>
+        <Route path="/course/P2018" element={<P2018/>}></Route>
+        <Route path="/course/P2019" element={<P2019/>}></Route>
+        <Route path="/course/P2020" element={<P2020/>}></Route>
+        <Route path="/course/P2021" element={<P2021/>}></Route>
+        <Route path="/course/P2022" element={<P2022/>}></Route>
+        <Route path="/course/P2023" element={<P2023/>}></Route>
 
-       
 
       </Routes>
     </BrowserRouter>
