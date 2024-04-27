@@ -86,15 +86,15 @@ function App() {
         <Route path="/course/grade11lesson5" element={<Grade11lesson05 />}></Route>
         <Route path="/course/grade11lesson6" element={<Grade11lesson06 />}></Route>
 
-        <Route path="/revisionlesson01" element={<Revisionlesson01/>}></Route>
-        <Route path="/revisionlesson02" element={<Revisionlesson02/>}></Route>
-        <Route path="/revisionlesson03" element={<Revisionlesson03/>}></Route>
-        <Route path="/revisionlesson04" element={<Revisionlesson04/>}></Route>
-        <Route path="/revisionlesson05" element={<Revisionlesson05/>}></Route>
-        <Route path="/revisionlesson06" element={<Revisionlesson06/>}></Route>
-        <Route path="/revisionlesson07" element={<Revisionlesson07/>}></Route>
-        <Route path="/revisionlesson08" element={<Revisionlesson08/>}></Route>
-        <Route path="/revisionlesson09" element={<Revisionlesson09/>}></Route>
+        <Route path="/course/revisionlesson01" element={<Revisionlesson01/>}></Route>
+        <Route path="/course/revisionlesson02" element={<Revisionlesson02/>}></Route>
+        <Route path="/course/revisionlesson03" element={<Revisionlesson03/>}></Route>
+        <Route path="/course/revisionlesson04" element={<Revisionlesson04/>}></Route>
+        <Route path="/course/revisionlesson05" element={<Revisionlesson05/>}></Route>
+        <Route path="/course/revisionlesson06" element={<Revisionlesson06/>}></Route>
+        <Route path="/course/revisionlesson07" element={<Revisionlesson07/>}></Route>
+        <Route path="/course/revisionlesson08" element={<Revisionlesson08/>}></Route>
+        <Route path="/course/revisionlesson09" element={<Revisionlesson09/>}></Route>
 
 
        
