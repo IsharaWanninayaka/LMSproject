@@ -1,19 +1,12 @@
 import React from "react";
 import holi1 from "../../images/Holi 1.png";
 import holi2 from "../../images/Holi 2.png";
+import jenzeict from '../../images/genZictcalss_logo 1.png';
 import jenzeict2 from '../../images/genZictclass LOGO.png';
-import loginlogo from '../../images/login.png';
 import memberHoli from '../../images/Member_Holi 1.png';
 import memberHoli2 from '../../images/Member Holi 2 1.png';
-import { IoMdMail } from "react-icons/io";
-import { FaCircleUser } from "react-icons/fa6";
-import { FaMobile } from "react-icons/fa6";
-import { RiLockPasswordFill } from "react-icons/ri";
-//import { Link } from 'react-router-dom';
 
-
-import "../../css/style.scss";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 function Login() {
   return (
     <div className="h-auto">
@@ -38,72 +31,24 @@ function Login() {
         </div>
 
         <form >
-            <div className="w-[210px] h-[295px] bg-[rgb(25,31,92)] mt-[39px] rounded-[28px] m-auto flex flex-col">
-                <div className="w-[192px] h-[44px] bg-white  m-2 rounded-[72px] flex flex-raw">
-                        <Link to='/login'>
-                            <div className="w-[93px] h-[38px]   m-[3px] basis-1/2 hover:cursor-pointer">
-                              <p className="text-[14px] font-montserat mt-[11px] ml-5 font-black text-[rgb(25,31,92)]">LOGIN</p>
-                            </div>
-                        </Link>
-                            <div className="bg-[rgb(25,31,92)] rounded-[72px] w-[93px] h-[38px] basis-1/2 hover:cursor-pointer m-[3px]">
-                              <p className=" text-[14px] font-montserat mt-2 ml-[11px] font-black text-white">RGISTER</p>
-                            </div>
-                </div>
 
-                <div className="w-[173px] h-[31px] flex flex-row ml-[18.5px] mt-2">
-                  <div className="w-[36px] h-[31px] float-left bg-white rounded-s-[5px]">
-                      <div className="mt-1 ml-[6px]"><FaCircleUser  size={24}  color="darkblue"/></div>    
-                  </div>
-                  <div className="w-[133px] h-[31px] ml-1 ">
-                      <input type="name" name="name" placeholder="Full Name " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                  </div>
+            <div className="w-[210px] h-[225px] bg-[rgb(25,31,92)] mt-[39px] rounded-[28px] m-auto flex flex-col">
+                <div className="w-[173px] m-5">
+                  <p className="text-white text-[15px] font-bold text-center">VERIFICATION CODE</p>
                 </div>
-
-                <div className="w-[173px] h-[31px] flex flex-row ml-[18.5px] mt-2">
-                  <div className="w-[36px] h-[31px] float-left bg-white rounded-s-[5px]">
-                      <div className="mt-1 ml-[6px]"><FaMobile  size={24}  color="darkblue" /></div>    
-                  </div>
-                  <div className="w-[133px] h-[31px] ml-1 ">
-                      <input type="text" name="text" placeholder="Phone Number " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                  </div>
-                </div>
-
-                <div className="w-[173px] h-[31px] flex flex-row ml-[18.5px] mt-2">
-                  <div className="w-[36px] h-[31px] float-left bg-white rounded-s-[5px]">
-                      <div className="mt-1 ml-[6px]"><IoMdMail size={24}  color="darkblue" /></div>    
-                  </div>
-                  <div className="w-[133px] h-[31px] ml-1 ">
-                      <input type="email" name="email" placeholder="Enter email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                  </div>
-                </div>
-
-                <div className="w-[173px] h-[31px] flex flex-row ml-[18.5px] mt-2">
-                  <div className="w-[36px] h-[31px] float-left bg-white rounded-s-[5px]">
-                      <div className="mt-1 ml-[6px]"><RiLockPasswordFill size={24}  color="darkblue" /></div>    
-                  </div>
-                  <div className="w-[133px] h-[31px] ml-1 ">
-                      <input type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                  </div>
-                </div>
+                <input type="text" className="w-[120px] h-[34px] rounded-[29px] ml-12"/>
+                <div className="w-[186px] h-auto ml-[11px] mt-[7px]"><img src={jenzeict} alt=""/></div>
 
                 <button>
                     <div className=" w-[152px] h-[22px] bg-[rgb(246,190,29)] mt-4 m-auto rounded-full">
-                            <p className="text-white font-montserat text-[10px] font-bold text-center pt-[3px]">Verify My Email Address</p>
+                            <p className="text-white font-montserat text-[10px] font-bold text-center pt-[3px]">SUBMIT</p>
                     </div>
                 </button>
-            </div>  
-
-            <div className="m-auto w-[102px] h-[36px] ">
-            <button type="submit" name="submit" className=" w-[124px] h-[36px] bg-[rgb(25,31,92)] mt-2 rounded-full flex ">
-                <img src={loginlogo} alt="" className="w-8 h-8 mt-[2px] ml-[3px]"/>
-                <p className="text-white font-montserat text-[15px] font-bold mt-2 ml-1">REGISTER</p>
-            </button>
             </div>
+            
         </form>
-
         
-        
-        <div className="w-full h-[110px] bg-[rgb(25,31,92)] m-auto mt-[39px]">
+        <div className="w-full h-[110px] bg-[rgb(25,31,92)] m-auto mt-[145px]">
           <p className="font-bold text-white text-[14px] pt-2 text-center font-montserat">Meet Our Web Development Team</p>
           <p className=" text-white text-[14px] text-center pt-1 font-light font-montserat">Our team consist of passionate individual dedicated to creating exeptional web experiences.</p>
         </div>

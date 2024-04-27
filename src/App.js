@@ -7,6 +7,8 @@ import Nopage from './components/main-pages/Nopage.jsx';
 import Register from './components/login-pages/Register.jsx';
 import Login from './components/login-pages/Login.jsx';
 import Payment from './components/main-pages/Payment.jsx';
+import RegisterSuccess from './components/login-pages/RegisterSuccess.jsx';
+import Verification from './components/login-pages/Verification.jsx';
 
 import Grade10main from './components/sub-pages/course/Grade10main.jsx';
 import Grade11main from './components/sub-pages/course/Grade11main.jsx';
@@ -71,8 +73,11 @@ function App() {
         <Route path="/payment" element={<Payment />}></Route>
         <Route path="*" element={<Nopage />}></Route>
 
+        <Route path="/registersuccess" element={<RegisterSuccess />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/verification" element={<Verification />}></Route>
+
 
         <Route path="/course/grade10main" element={<Grade10main />}></Route>
         <Route path="/course/grade11main" element={<Grade11main />}></Route>
