@@ -6,6 +6,7 @@ import Contact from './components/main-pages/Contact.jsx';
 import Nopage from './components/main-pages/Nopage.jsx';
 import Register from './components/login-pages/Register.jsx';
 import Login from './components/login-pages/Login.jsx';
+import Payment from './components/main-pages/Payment.jsx';
 
 import Grade10main from './components/sub-pages/course/Grade10main.jsx';
 import Grade11main from './components/sub-pages/course/Grade11main.jsx';
@@ -67,6 +68,7 @@ function App() {
         <Route path="/course" element={<Course />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/account" element={<Account />}></Route>
+        <Route path="/payment" element={<Payment />}></Route>
         <Route path="*" element={<Nopage />}></Route>
 
         <Route path="/register" element={<Register />}></Route>

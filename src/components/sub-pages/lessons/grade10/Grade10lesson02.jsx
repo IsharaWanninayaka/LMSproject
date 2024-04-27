@@ -4,6 +4,7 @@ import Footer from '../../../main-pages/Footer';
 import holi1 from '../../../../images/Holi 1.png';
 import holi2 from '../../../../images/Holi 2.png';
 import lescontent1 from '../../../../images/Course Sinhala.png';
+import payicon from '../../../../images/payicon.png';
 
 function Grade10lesson02() {
 
@@ -18,6 +19,8 @@ function Grade10lesson02() {
   const Description2 = "A computer is a machine that can store and process information";
   const Description3 = "A computer is a machine that can store and process information";
   const Description4 = "A computer is a machine that can store and process information";
+
+  const Paymentles1 = "LKR 1000.00"
 
   return (
 
@@ -50,7 +53,7 @@ function Grade10lesson02() {
 
       
       <div>
-        <div className='w-[238px] m-auto realtive pt-4 h-[976px]'>
+        <div className='w-[238px] m-auto realtive pt-4 h-[880px]'>
 
           <div className='bg-[#191F5C] m-0  rounded-[15px] mb-5 w-[238px] h-[195px] items-center '>
             <Link to=''>
@@ -120,10 +123,21 @@ function Grade10lesson02() {
             </Link>
           </div>
 
-
         </div>
       </div>
 
+      <div className='h-[200px] '>
+      <Link to=''>
+        <div className='bg-[#191F5C] w-[196px] h-[40px] m-auto  rounded-[60px]'>
+          <div className='m-auto text-white '>
+              <p className='pt-[2px] text-center pl-8 text-[24px] font-semibold'>{Paymentles1}</p>
+          </div>
+          <div>
+              <img className='flex items-start mt-[-32.7px] pl-1' src={payicon} alt=''/>
+          </div>
+        </div>
+      </Link>
+      </div>
 
 
       <div className='bottom-headder'>
