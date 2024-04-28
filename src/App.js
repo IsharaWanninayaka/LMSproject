@@ -7,6 +7,7 @@ import Nopage from './components/main-pages/Nopage.jsx';
 import Register from './components/login-pages/Register.jsx';
 import Login from './components/login-pages/Login.jsx';
 import Payment from './components/main-pages/Payment.jsx';
+import Bankpayment from './components/sub-pages/paymnt/bankpayment.jsx';
 import RegisterSuccess from './components/login-pages/RegisterSuccess.jsx';
 import Verification from './components/login-pages/Verification.jsx';
 
@@ -119,6 +120,9 @@ function App() {
         <Route path="/course/P2021" element={<P2021/>}></Route>
         <Route path="/course/P2022" element={<P2022/>}></Route>
         <Route path="/course/P2023" element={<P2023/>}></Route>
+
+
+        <Route path="/payment/bankpayment" element={<Bankpayment/>}></Route>
 
 
       </Routes>
