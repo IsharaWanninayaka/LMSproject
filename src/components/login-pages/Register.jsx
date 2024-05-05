@@ -88,7 +88,7 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><FaCircleUser  size={24}  color="darkblue"/></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="name" name="name" placeholder="Full Name " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <input type="name" name="name" placeholder="Full Name " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><FaMobile  size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="text" name="phone" placeholder="Phone Number " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <input type="text" name="text" placeholder="Phone Number " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
                   </div>
                 </div>
 
@@ -106,7 +106,7 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><IoMdMail size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="email" name="email" placeholder="Enter email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <input type="email" name="email" placeholder="Enter email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
                   </div>
                 </div>
 
@@ -115,7 +115,7 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><RiLockPasswordFill size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <input type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
                   </div>
                 </div>
 
