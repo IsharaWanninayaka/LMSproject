@@ -11,12 +11,13 @@ import { FaMobile } from "react-icons/fa6";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Validation from "../Scripts/registervalidation";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 //import { Link } from 'react-router-dom';
 
 
 import "../../css/style.scss";
-import { Link, useNavigate } from "react-router-dom";
-function Login() {
+
+function Register() {
 
   const[values,setvalues] = useState({
     name:"",
@@ -25,27 +26,23 @@ function Login() {
     phone:""
   });
 
-  const controllInput= (event)=>{
-    setvalues((prev) =>({...prev,[event.target.name] : [event.target.value]}))
-  }
   const navigate = useNavigate();
-  const[errors,seterrors] = useState({});
-
+  const[errors,seterrors] = useState({ });
+  const controllInput= (event)=>{
+    setvalues(prev =>({...prev,[event.target.name] : [event.target.value]}))
+  }
+  
   const controllSubmit= (event)=>{
     event.preventDefault();
     seterrors(Validation(values));
+    if(errors.name === "" && errors.email === "" && errors.password ==="" && errors.phone === ""){
+      axios.post('http://localhost:8081/register',values)
+        .then(res =>{
+          navigate("/login")
+        })
+        .catch(err =>console.log(err))
+    }
   }
-
-  if(errors.name === "" && errors.email === "" && errors.password && errors.phone){
-    axios
-      .post("http://localhost:8081/register",values)
-      .then(res =>{
-        navigate("/login");
-      })
-      .catch(err =>(console.log(err)))
-  }
-  
-
 
 
   return (
@@ -70,7 +67,7 @@ function Login() {
           </div>
         </div>
 
-        <form action="">
+        <form action="" onSubmit={controllSubmit}>
             <div className="w-[210px] h-[295px] bg-[rgb(25,31,92)] mt-[39px] rounded-[28px] m-auto flex flex-col">
                 <div className="w-[192px] h-[44px] bg-white  m-2 rounded-[72px] flex flex-raw">
                         <Link to='/login'>
@@ -88,7 +85,8 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><FaCircleUser  size={24}  color="darkblue"/></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input type="name" name="name" placeholder="Full Name " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <input onChange={controllInput} type="name" name="name" placeholder="Full Name " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.name}</span>
                   </div>
                 </div>
 
@@ -97,7 +95,8 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><FaMobile  size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input type="text" name="text" placeholder="Phone Number " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <input onChange={controllInput} type="text" name="phone" placeholder="Phone Number " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.phone}</span>
                   </div>
                 </div>
 
@@ -106,7 +105,8 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><IoMdMail size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input type="email" name="email" placeholder="Enter email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <input onChange={controllInput} type="email" name="email" placeholder="Enter email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.email}</span>
                   </div>
                 </div>
 
@@ -115,7 +115,8 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><RiLockPasswordFill size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <input onChange={controllInput} type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.password}</span>
                   </div>
                 </div>
 
@@ -127,7 +128,7 @@ function Login() {
             </div>  
 
             <div className="m-auto w-[102px] h-[36px] ">
-            <button onSubmit={controllSubmit} type="submit" name="submit" className=" w-[124px] h-[36px] bg-[rgb(25,31,92)] mt-2 rounded-full flex ">
+            <button  type="submit" name="submit" className=" w-[124px] h-[36px] bg-[rgb(25,31,92)] mt-2 rounded-full flex ">
                 <img src={loginlogo} alt="" className="w-8 h-8 mt-[2px] ml-[3px]"/>
                 <p className="text-white font-montserat text-[15px] font-bold mt-2 ml-1">REGISTER</p>
             </button>
@@ -250,4 +251,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
