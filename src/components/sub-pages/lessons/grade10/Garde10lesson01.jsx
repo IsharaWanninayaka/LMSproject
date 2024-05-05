@@ -129,7 +129,7 @@ function Garde10lesson01() {
       </div>
 
       <div className='h-[200px] '>
-      <Link to=''>
+      <Link to='/payment'>
         <div className='bg-[#191F5C] w-[196px] h-[40px] m-auto  rounded-[60px]'>
           <div className='m-auto text-white '>
               <p className='pt-[2px] text-center pl-8 text-[24px] font-semibold'>{Paymentles1}</p>

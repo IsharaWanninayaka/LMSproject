@@ -48,7 +48,7 @@ function Payment() {
 
 
       <div className='h-[200px] '>
-      < Link to=''>
+      < Link to='/payment/bankpayment'>
           <div className='bg-[#191F5C] w-[225px] h-[42px] m-auto  rounded-[60px]  '>
             
             <div className='items-center m-auto text-white w-[170px] h-[]20px '>
