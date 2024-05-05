@@ -56,6 +56,7 @@ function Login() {
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
                       <input type="name" name="name" placeholder="Full Name " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">Error!</span>
                   </div>
                 </div>
 
@@ -65,6 +66,7 @@ function Login() {
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
                       <input type="text" name="text" placeholder="Phone Number " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">Error!</span>
                   </div>
                 </div>
 
@@ -74,6 +76,7 @@ function Login() {
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
                       <input type="email" name="email" placeholder="Enter email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">Error!</span>
                   </div>
                 </div>
 
@@ -83,6 +86,7 @@ function Login() {
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
                       <input type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">Error!</span>
                   </div>
                 </div>
 
