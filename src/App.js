@@ -10,6 +10,9 @@ import Payment from './components/main-pages/Payment.jsx';
 import Bankpayment from './components/sub-pages/paymnt/bankpayment.jsx';
 import RegisterSuccess from './components/login-pages/RegisterSuccess.jsx';
 import Verification from './components/login-pages/Verification.jsx';
+import AdminLogin from './components/login-pages/AdminLogin.jsx';
+import AdminRegister from './components/login-pages/AdminRegister.jsx';
+import AdminRegisterSuccess from './components/login-pages/AdminRegisterSuccess.jsx';
 
 import Grade10main from './components/sub-pages/course/Grade10main.jsx';
 import Grade11main from './components/sub-pages/course/Grade11main.jsx';
@@ -78,6 +81,9 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/verification" element={<Verification />}></Route>
+        <Route path="/adminlogin" element={<AdminLogin />}></Route>
+        <Route path="/adminregister" element={<AdminRegister/>}></Route>
+        <Route path="/adminregistersuccess" element={<AdminRegisterSuccess/>}></Route>
 
 
         <Route path="/course/grade10main" element={<Grade10main />}></Route>
