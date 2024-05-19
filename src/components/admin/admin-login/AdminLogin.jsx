@@ -1,8 +1,8 @@
 import React from 'react'
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import loginlogo from '../../images/login.png';
-import "../../css/style.scss";
+import loginlogo from '../../../images/login.png';
+import "../../../css/style.scss";
 import { Link } from 'react-router-dom';
 
 

@@ -3,8 +3,8 @@ import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaUserCircle } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
-import loginlogo from '../../images/login.png';
-import "../../css/style.scss";
+import loginlogo from '../../../images/login.png';
+import "../../../css/style.scss";
 //import loginlogo from '../../images/login.png';
 import { Link } from 'react-router-dom';
 
