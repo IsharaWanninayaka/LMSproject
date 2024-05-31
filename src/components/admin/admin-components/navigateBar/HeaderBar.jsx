@@ -2,6 +2,7 @@ import React from 'react'
 import '../../admin-style/headerbar.css';
 import SearchBox from '../SearchBox';
 import { Link } from 'react-router-dom';
+import { FaHome } from "react-icons/fa";
 
 
 const HeaderBar = () => {
@@ -35,6 +36,13 @@ const HeaderBar = () => {
         <div className=' w-[142px] h-[37px] bg-[#ffffff] rounded-[50px] mt-[14px] ml-4 hover:bg-[#f8fc10]'>
             <p className='m-auto text-[15px] font-montserat font-bold mt-[6px] ml-[34px] w-[142px]'>PAYMENT</p>
         </div>
+        <Link to="/adminlogin/admindashboard">
+        <div className='bg-[#ffffff] mt-[8px] ml-6 rounded-[50px]  w-12 h-12 hover:bg-[#f8fc10]'>
+            <div className='mt-[8px] ml-[8px] pt-2'><FaHome size={30} color='#191F5C'/></div>
+        </div>
+        </Link>
+        
+
         
 
     </div>
