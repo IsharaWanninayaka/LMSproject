@@ -1,12 +1,33 @@
 import { Outlet, NavLink } from "react-router-dom";
 import "../../css/footer.css";
+import axios from "axios";
+import { useContext} from "react";
+import { AuthContext } from "../login-pages/authcontext";
 
 export default function Headder() {
+  
+  const { auth } = useContext(AuthContext);
+  const{setacc_details} = useContext(AuthContext);
+  
+
+  const getUserDetails = async (token) => {
+    const response = await axios.get("http://localhost:8081/userAccount", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      }
+    });
+    return response.data;
+  };
+  const fetchUserDetails = async () => {
+    const detail = await getUserDetails(auth.token);
+    setacc_details(detail);
+  };
+
   return (
     <div>
       <div className="main-div ">
         <div className="div-home">
-          <NavLink to="/">
+          <NavLink to="/home">
             <svg
               width="32"
               height="28"
@@ -63,7 +84,7 @@ export default function Headder() {
         </div>
 
         <div className="div-course">
-          <NavLink to="/Account">
+          <NavLink to="/Account" onClick={fetchUserDetails}>
             <svg
               width="29"
               height="29"

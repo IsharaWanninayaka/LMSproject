@@ -1,15 +1,17 @@
-import React from 'react';
 import Footer from './Footer';
 import holi1 from "../../images/Holi 1.png";
 import holi2 from "../../images/Holi 2.png";
 import { MdAccountCircle } from "react-icons/md";
-
+import { useContext } from 'react';
+import { AuthContext } from '../login-pages/authcontext';
 
 export default function Account() {
 
-  const userName = "Devinda wanasingha";
-  const contactNo = "071 53 89 697";
-  const email = "isharawanninayaka@gmail.com";
+  const{acc_details} = useContext(AuthContext);
+
+  let userName = acc_details.name;
+  let contactNo = acc_details.phone;
+  let email = acc_details.email;
 
 
   return (

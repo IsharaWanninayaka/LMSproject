@@ -36,11 +36,11 @@ function Register() {
     event.preventDefault();
     seterrors(Validation(values));
     if(errors.name === "" && errors.email === "" && errors.password ==="" && errors.phone === ""){
-      axios.post('http://localhost:8081/register',values)
+      axios.post('http://localhost:8081/',values)
         .then(res =>{
           navigate("/login")
         })
-        .catch(err =>console.log(err))
+        .catch(err =>console.log(err));
     }
   }
 

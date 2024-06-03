@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import holi1 from "../../images/Holi 1.png";
 import holi2 from "../../images/Holi 2.png";
 import jenzeict from '../../images/genZictcalss_logo 1.png';
@@ -11,10 +11,10 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import Validation from "../Scripts/loginvalidation";
 import axios from "axios";
 //import { Link } from 'react-router-dom';
-
-
+import {AuthContext} from '../login-pages/authcontext';
 import "../../css/style.scss";
 import { Link, useNavigate } from "react-router-dom";
+
 function Login() {
 
   const[values,setvalues] = useState({
@@ -26,31 +26,31 @@ function Login() {
   const controllInput= (event)=>{
     setvalues(prev =>({...prev,[event.target.name] : [event.target.value]}))
   }
+  const{auth,setAuth} = useContext(AuthContext);
   const navigate = useNavigate();
   const[errors,seterrors] = useState({});
-
+  //const[errstate,seterstate] = useState({});
+  
   const controllSubmit= (event)=>{
     event.preventDefault();
     seterrors(Validation(values));
     if(errors.email === "" && errors.password === ""){
-      axios
-        .post('http://localhost:8081/login',values)
+      axios.post('http://localhost:8081/login',values)
         .then(res =>{
-            if(res.data === "Success"){
-                navigate("/");
-            }else{
-                alert("No Record Exist");
+            setAuth(res.data);
+            console.log(auth.loginSuccses);
+            if(auth.loginSuccses ==='Sucsess'){
+              navigate('/home');
             }
+
         })
         .catch(err =>(console.log(err)))
     }
   }
-
   
 
   return (
     <div className="h-auto">
-      
         <div className="w-full bg-[rgb(25,31,92)] h-[69px] flex flex-row">
           <div className="float-left basis-1/5">
             <img className="mt-4" src={holi1} alt="" />
@@ -76,7 +76,7 @@ function Login() {
                     <div className="w-[93px] h-[38px] bg-[rgb(25,31,92)] rounded-[72px] m-[3px] basis-1/2 hover:cursor-pointer">
                       <p className="text-[14px] font-montserat mt-2 ml-5 font-black text-white">LOGIN</p>
                     </div>
-                    <Link to="/register">
+                    <Link to="/">
                         <div className="w-[93px] h-[38px] basis-1/2 hover:cursor-pointer">
                           <p className="text-[rgb(25,31,92)] text-[14px] font-montserat mt-[11px] ml-[13px] font-black">RGISTER</p>
                         </div>
@@ -228,8 +228,6 @@ function Login() {
         <div className="m-auto w-[320px]">
           <img src={jenzeict2} alt=""className="m-auto"/>
         </div>
-        
-      
     </div>
   );
 }
