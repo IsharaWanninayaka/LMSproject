@@ -70,6 +70,7 @@ function Login() {
           </div>
         </div>
 
+
         <form action="" onSubmit={controllSubmit}>
             <div className="w-[210px] h-[295px] bg-[rgb(25,31,92)] mt-[39px] rounded-[28px] m-auto flex flex-col">
                 <div className="w-[192px] h-[44px] bg-white  m-2 rounded-[72px] flex flex-raw">
@@ -82,6 +83,7 @@ function Login() {
                         </div>
                     </Link>
                 </div>
+
 
                 <div className="w-[173px] h-[31px] flex flex-row ml-[18.5px] mt-2">
                   <div className="w-[36px] h-[31px] float-left bg-white rounded-s-[5px]">
@@ -103,6 +105,7 @@ function Login() {
                   </div>
                 </div>
 
+
                 <div className="w-[173px] ml-[18.5px]">
                   <input type="checkbox"  name="rememberPassword" value="" className="w-[7px] h-[7px]"/>
                   <label for="remember " value="True" className="font-montserat text-[8px] text-white ml-1">Remember Password </label>
@@ -120,6 +123,8 @@ function Login() {
             </div>
         </form>
         
+
+
         <div className="w-full h-[110px] bg-[rgb(25,31,92)] m-auto mt-[39px]">
           <p className="font-bold text-white text-[14px] pt-2 text-center font-montserat">Meet Our Web Development Team</p>
           <p className=" text-white text-[14px] text-center pt-1 font-light font-montserat">Our team consist of passionate individual dedicated to creating exeptional web experiences.</p>
@@ -150,6 +155,8 @@ function Login() {
           </div>
         </div>
 
+
+
         <div className="w-[320px] m-auto mt-5">
           <div className="w-[320px] h-[164spx]">
             <div className="relative">
@@ -174,6 +181,8 @@ function Login() {
           </ul>
           </div>
         </div>
+
+
 
         <div className="w-[320px] m-auto mt-5">
           <div className="w-[320px] h-[128px]">
@@ -200,6 +209,8 @@ function Login() {
           </div>
         </div>
 
+
+
         <div className="w-[320px] m-auto mt-5">
           <div className="w-[320px] h-[164spx]">
             <div className="relative">
@@ -224,6 +235,9 @@ function Login() {
           </ul>
           </div>
         </div>
+
+
+
 
         <div className="m-auto w-[320px]">
           <img src={jenzeict2} alt=""className="m-auto"/>

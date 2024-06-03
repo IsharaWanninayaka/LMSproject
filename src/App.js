@@ -11,6 +11,14 @@ import Bankpayment from './components/sub-pages/paymnt/bankpayment.jsx';
 import RegisterSuccess from './components/login-pages/RegisterSuccess.jsx';
 import Verification from './components/login-pages/Verification.jsx';
 
+import AdminLogin from './components/admin/admin-login/AdminLogin.jsx';
+import AdminRegister from './components/admin/admin-login/AdminRegister.jsx';
+import AdminRegisterSuccess from './components/admin/admin-login/AdminRegisterSuccess.jsx';
+import AdminDashboard from './components/admin/admin-panels/AdminDashboard.jsx';
+import BasicDetails from './components/admin/admin-panels/BasicDetails.jsx';
+import GradesDetails from './components/admin/admin-panels/GradesDetails.jsx';
+import RevisionDetails from './components/admin/admin-panels/RevisionDetails.jsx';
+
 import Grade10main from './components/sub-pages/course/Grade10main.jsx';
 import Grade11main from './components/sub-pages/course/Grade11main.jsx';
 import Revisionmain from './components/sub-pages/course/Revisionmain.jsx';
@@ -78,6 +86,14 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/verification" element={<Verification />}></Route>
+
+        <Route path="/adminlogin" element={<AdminLogin />}></Route>
+        <Route path="/adminregister" element={<AdminRegister/>}></Route>
+        <Route path="/adminregistersuccess" element={<AdminRegisterSuccess/>}></Route>
+        <Route path="/adminlogin/admindashboard" element={<AdminDashboard/> }></Route>
+        <Route path="/adminlogin/admindashboard/basicdetails" element={<BasicDetails/> }></Route>
+        <Route path="/adminlogin/admindashboard/gradesdetails" element={<GradesDetails/> }></Route>
+        <Route path="/adminlogin/admindashboard/revisiondetails" element={<RevisionDetails/> }></Route>
 
 
         <Route path="/course/grade10main" element={<Grade10main />}></Route>
