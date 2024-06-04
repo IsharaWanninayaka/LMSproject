@@ -45,16 +45,44 @@
     }
     .col-1 {
       flex-basis: 10%;
+      padding-right: 140px;
+      padding-left: 40px;
     }
     .col-2 {
       flex-basis: 40%;
+      padding-right: 140px;
     }
     .col-3 {
       flex-basis: 25%;
+      padding-right: 150px;
     }
     .col-4 {
       flex-basis: 25%;
+      padding-right: 163px;
     }
+
+    .tcol-1 {
+      flex-basis: 10%;
+      margin-right: 80px;
+      padding-left: 10px;
+    }
+    .tcol-2 {
+      flex-basis: 40%;
+      margin-right: 10px;
+      margin-left: 25px;
+    }
+    .tcol-3 {
+      flex-basis: 25%;
+      margin-right: 140px;
+
+    }
+    .tcol-4 {
+      flex-basis: 25%;
+      margin-right: 80px;
+ 
+    }
+
+
     
     @media all and (max-width: 767px) {
       .table-header {
