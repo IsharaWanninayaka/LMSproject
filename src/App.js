@@ -75,7 +75,7 @@ function App() {
     <div>
       <BrowserRouter>
       <Routes>
-        <Route index element={<Home />}></Route>
+        <Route index element={<Register />}></Route>
         <Route path="/course" element={<Course />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/account" element={<Account />}></Route>
@@ -83,7 +83,7 @@ function App() {
         <Route path="*" element={<Nopage />}></Route>
 
         <Route path="/registersuccess" element={<RegisterSuccess />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+        <Route path="/home" element={<Home />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/verification" element={<Verification />}></Route>
 
