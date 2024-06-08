@@ -36,7 +36,7 @@ function Register() {
     event.preventDefault();
     seterrors(Validation(values));
     if(errors.name === "" && errors.email === "" && errors.password ==="" && errors.phone === ""){
-      axios.post('http://localhost:8081/',values)
+      axios.post('http://localhost:8081/user',values)
         .then(res =>{
           navigate("/login")
         })

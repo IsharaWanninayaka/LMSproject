@@ -1,26 +1,35 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import "../../css/footer.css";
 import axios from "axios";
-import { useContext} from "react";
+import { useContext } from "react";
 import { AuthContext } from "../login-pages/authcontext";
 
 export default function Headder() {
-  
-  const { auth } = useContext(AuthContext);
-  const{setacc_details} = useContext(AuthContext);
-  
+  const navigate = useNavigate();
+  const { auth, setacc_details, set_erroredetails } = useContext(AuthContext);
 
   const getUserDetails = async (token) => {
-    const response = await axios.get("http://localhost:8081/userAccount", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      }
-    });
-    return response.data;
+    try {
+      const response = await axios.get("http://localhost:8081/user/userAccount", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      set_erroredetails(error);
+      navigate('/error');
+      throw error;  // Re-throwing to ensure fetchUserDetails doesn't continue
+    }
   };
+
   const fetchUserDetails = async () => {
-    const detail = await getUserDetails(auth.token);
-    setacc_details(detail);
+    try {
+      const detail = await getUserDetails(auth.token);
+      setacc_details(detail);
+    } catch (error) {
+      console.error('Failed to fetch user details:', error);
+    }
   };
 
   return (
@@ -83,8 +92,8 @@ export default function Headder() {
           </NavLink>
         </div>
 
-        <div className="div-course">
-          <NavLink to="/Account" onClick={fetchUserDetails}>
+        <div className="div-course" onClick={fetchUserDetails}>
+          <NavLink to="/Account">
             <svg
               width="29"
               height="29"

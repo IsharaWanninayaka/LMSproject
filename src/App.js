@@ -4,6 +4,7 @@ import Home from './components/main-pages/Home.jsx';
 import Course from './components/main-pages/Course.jsx';
 import Contact from './components/main-pages/Contact.jsx';
 import Nopage from './components/main-pages/Nopage.jsx';
+import Error from './components/main-pages/Errors.jsx';
 import Register from './components/login-pages/Register.jsx';
 import Login from './components/login-pages/Login.jsx';
 import Payment from './components/main-pages/Payment.jsx';
@@ -81,6 +82,7 @@ function App() {
         <Route path="/account" element={<Account />}></Route>
         <Route path="/payment" element={<Payment />}></Route>
         <Route path="*" element={<Nopage />}></Route>
+        <Route path="/error" element={<Error />}></Route>
 
         <Route path="/registersuccess" element={<RegisterSuccess />}></Route>
         <Route path="/home" element={<Home />}></Route>
@@ -101,15 +103,15 @@ function App() {
         <Route path="/course/revisionmain" element={<Revisionmain />}></Route>
         <Route path="/course/pastpapermain" element={<Pastpapermain />}></Route>
  
-        <Route path="/course/grade10lesson1" element={<Grade10lesson01 />}></Route>
-        <Route path="/course/grade10lesson2" element={<Grade10lesson02 />}></Route>
-        <Route path="/course/grade10lesson3" element={<Grade10lesson03 />}></Route>
-        <Route path="/course/grade10lesson4" element={<Grade10lesson04 />}></Route>
-        <Route path="/course/grade10lesson5" element={<Grade10lesson05 />}></Route>
-        <Route path="/course/grade10lesson6" element={<Grade10lesson06 />}></Route>
-        <Route path="/course/grade10lesson7" element={<Grade10lesson07 />}></Route>
-        <Route path="/course/grade10lesson8" element={<Grade10lesson08 />}></Route>
-        <Route path="/course/grade10lesson9" element={<Grade10lesson09 />}></Route>
+        <Route path="/course/grade10/lesson1" element={<Grade10lesson01 />}></Route>
+        <Route path="/course/grade10/lesson2" element={<Grade10lesson02 />}></Route>
+        <Route path="/course/grade10/lesson3" element={<Grade10lesson03 />}></Route>
+        <Route path="/course/grade10/lesson4" element={<Grade10lesson04 />}></Route>
+        <Route path="/course/grade10/lesson5" element={<Grade10lesson05 />}></Route>
+        <Route path="/course/grade10/lesson6" element={<Grade10lesson06 />}></Route>
+        <Route path="/course/grade10/lesson7" element={<Grade10lesson07 />}></Route>
+        <Route path="/course/grade10/lesson8" element={<Grade10lesson08 />}></Route>
+        <Route path="/course/grade10/lesson9" element={<Grade10lesson09 />}></Route>
 
 
         <Route path="/course/grade11lesson1" element={<Grade11lesson01 />}></Route>

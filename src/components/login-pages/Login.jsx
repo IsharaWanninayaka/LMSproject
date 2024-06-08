@@ -10,41 +10,43 @@ import { IoMdMail } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Validation from "../Scripts/loginvalidation";
 import axios from "axios";
-//import { Link } from 'react-router-dom';
 import {AuthContext} from '../login-pages/authcontext';
 import "../../css/style.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
 
-  const[values,setvalues] = useState({
+  const[values,setValues] = useState({
     email:"",
     password:""
     
   });
-
-  const controllInput= (event)=>{
-    setvalues(prev =>({...prev,[event.target.name] : [event.target.value]}))
-  }
   const{auth,setAuth} = useContext(AuthContext);
   const navigate = useNavigate();
   const[errors,seterrors] = useState({});
-  //const[errstate,seterstate] = useState({});
+  const { set_erroredetails} = useContext(AuthContext);
+
+  const controllInput= (event)=>{
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
+  }
   
   const controllSubmit= (event)=>{
     event.preventDefault();
     seterrors(Validation(values));
     if(errors.email === "" && errors.password === ""){
-      axios.post('http://localhost:8081/login',values)
+      axios.post('http://localhost:8081/user/login',values)
         .then(res =>{
             setAuth(res.data);
             console.log(auth.loginSuccses);
             if(auth.loginSuccses ==='Sucsess'){
               navigate('/home');
             }
-
         })
-        .catch(err =>(console.log(err)))
+        .catch((error)=>{
+          set_erroredetails(error);
+          navigate('/error');
+        })
     }
   }
   
@@ -71,7 +73,7 @@ function Login() {
         </div>
 
 
-        <form action="" onSubmit={controllSubmit}>
+        <form action="post" onSubmit={controllSubmit}>
             <div className="w-[210px] h-[295px] bg-[rgb(25,31,92)] mt-[39px] rounded-[28px] m-auto flex flex-col">
                 <div className="w-[192px] h-[44px] bg-white  m-2 rounded-[72px] flex flex-raw">
                     <div className="w-[93px] h-[38px] bg-[rgb(25,31,92)] rounded-[72px] m-[3px] basis-1/2 hover:cursor-pointer">
