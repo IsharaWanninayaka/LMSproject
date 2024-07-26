@@ -39,6 +39,10 @@ function AdminLogin() {
               <input type='password' name='admin-email' placeholder='Enter Your Password' className='w-[211.66px] h-[49.33px] ml-2 rounded-r-[38px] placeholder-[rgb(25,31,92)]'></input>
             </div>
           </div>
+
+          <div>
+            <p className='text-white text-[10px]  text-center mt-4'>Don't have an account yet? <Link to="/adminregister" ><p className='text-yellow-300 underline underline-offset-1'>Register</p></Link></p>
+          </div>
           
           <Link to='/admindashboard'>
           <div className="m-auto w-[128px] h-[45.18px] ">
