@@ -11,38 +11,45 @@ import { FaMobile } from "react-icons/fa6";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Validation from "../Scripts/registervalidation";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 //import { Link } from 'react-router-dom';
-
 
 import "../../css/style.scss";
 
 function Register() {
-
-  const[values,setvalues] = useState({
+  const [values,setvalues] = useState({
     name:"",
+    phone:"",
     email:"",
-    password:"",
-    phone:""
+    password:""
   });
-
+  const [error,seterror] = useState({});
   const navigate = useNavigate();
-  const[errors,seterrors] = useState({ });
-  const controllInput= (event)=>{
-    setvalues(prev =>({...prev,[event.target.name] : [event.target.value]}))
-  }
-  
-  const controllSubmit= (event)=>{
-    event.preventDefault();
-    seterrors(Validation(values));
-    if(errors.name === "" && errors.email === "" && errors.password ==="" && errors.phone === ""){
-      axios.post('http://localhost:8081/user',values)
-        .then(res =>{
-          navigate("/login")
-        })
-        .catch(err =>console.log(err));
+  const [loading,setloading] = useState(false);
+
+  const controllSubmit=(e)=>{
+    e.preventDefault();
+    seterror(Validation(values));
+
+    if(error.name === "" && error.email === "" && error.password ==="" && error.phone === "" ){
+      setloading(true);
+      axios.post('http://localhost:5000/user/',values)
+      .then(res=>{
+        navigate("/login");
+      })
+      .catch(err=>{
+        if(err.response){
+          if(err.response.data.message === "User already exists"){
+              alert("User already exists");
+          }
+        }
+        console.log(err);
+      })
+      .finally(()=>{setloading(false)});
     }
   }
+   
+  
 
 
   return (
@@ -72,11 +79,11 @@ function Register() {
                 <div className="w-[192px] h-[44px] bg-white  m-2 rounded-[72px] flex flex-raw">
                         <Link to='/login'>
                             <div className="w-[93px] h-[38px]   m-[3px] basis-1/2 hover:cursor-pointer">
-                              <p className="text-[14px] font-montserat mt-[11px] ml-5 font-black text-[rgb(25,31,92)]">LOGIN</p>
+                              <p className="text-[14px] font-montserat mt-[11px] ml-5 font-black text-[rgb(25,31,92)] cursor-pointer">LOGIN</p>
                             </div>
                         </Link>
                             <div className="bg-[rgb(25,31,92)] rounded-[72px] w-[93px] h-[38px] basis-1/2 hover:cursor-pointer m-[3px]">
-                              <p className=" text-[14px] font-montserat mt-2 ml-[11px] font-black text-white">RGISTER</p>
+                              <p className=" text-[14px] font-montserat mt-2 ml-[11px] font-black text-white cursor-pointer">RGISTER</p>
                             </div>
                 </div>
 
@@ -85,8 +92,8 @@ function Register() {
                       <div className="mt-1 ml-[6px]"><FaCircleUser  size={24}  color="darkblue"/></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="name" name="name" placeholder="Full Name " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.name}</span>
+                      <input onChange={e => setvalues({...values,name:e.target.value})} type="name" name="name" placeholder="Full Name " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{error.name}</span>
                   </div>
                 </div>
 
@@ -95,8 +102,8 @@ function Register() {
                       <div className="mt-1 ml-[6px]"><FaMobile  size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="text" name="phone" placeholder="Phone Number " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.phone}</span>
+                      <input onChange={e => setvalues({...values,phone:e.target.value})} type="text" name="phone" placeholder="Phone Number " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{error.phone}</span>
                   </div>
                 </div>
 
@@ -105,8 +112,8 @@ function Register() {
                       <div className="mt-1 ml-[6px]"><IoMdMail size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="email" name="email" placeholder="Enter email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.email}</span>
+                      <input onChange={e => setvalues({...values,email:e.target.value})} type="email" name="email" placeholder="Enter email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{error.email}</span>
                   </div>
                 </div>
 
@@ -115,22 +122,23 @@ function Register() {
                       <div className="mt-1 ml-[6px]"><RiLockPasswordFill size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.password}</span>
+                      <input onChange={e => setvalues({...values,password:e.target.value})} type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{error.password}</span>
                   </div>
                 </div>
 
                 <button>
                     <div className=" w-[152px] h-[22px] bg-[rgb(246,190,29)] mt-4 m-auto rounded-full">
-                            <p className="text-white font-montserat text-[10px] font-bold text-center pt-[3px]">Verify My Email Address</p>
+                            <p className="text-white font-montserat text-[10px] font-bold text-center pt-[3px] cursor-pointer">Verify My Email Address</p>
                     </div>
                 </button>
             </div>  
 
             <div className="m-auto w-[102px] h-[36px] ">
             <button  type="submit" name="submit" className=" w-[124px] h-[36px] bg-[rgb(25,31,92)] mt-2 rounded-full flex ">
-                <img src={loginlogo} alt="" className="w-8 h-8 mt-[2px] ml-[3px]"/>
-                <p className="text-white font-montserat text-[15px] font-bold mt-2 ml-1">REGISTER</p>
+              {loading ? <span className=''><div class="w-6 h-6 border-2 border-dashed rounded-full animate-spin border-white ml-[7px] mt-[6px]"></div><p  className='ml-[40px] mt-[-24px] float-right text-white'>loading...</p></span> :
+              <div className="flex"><img src={loginlogo} alt="" className="w-8 h-8 mt-[3px] ml-[3px]"/><p className="text-white font-montserat text-[15px] font-bold mt-2 ml-1 cursor-pointer">REGISTER</p></div> 
+              }
             </button>
             </div>
         </form>

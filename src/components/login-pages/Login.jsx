@@ -10,46 +10,48 @@ import { IoMdMail } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Validation from "../Scripts/loginvalidation";
 import axios from "axios";
-import {AuthContext} from '../login-pages/authcontext';
 import "../../css/style.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
 
-  const[values,setValues] = useState({
+  
+  const [values,setvalues] = useState({
     email:"",
     password:""
-    
   });
-  const{auth,setAuth} = useContext(AuthContext);
+  const [error,seterror] = useState({});
   const navigate = useNavigate();
-  const[errors,seterrors] = useState({});
-  const { set_erroredetails} = useContext(AuthContext);
+  const [loading,setloading] = useState(false);
+  axios.defaults.withCredentials = true;
 
-  const controllInput= (event)=>{
-    const { name, value } = event.target;
-    setValues({ ...values, [name]: value });
-  }
-  
-  const controllSubmit= (event)=>{
-    event.preventDefault();
-    seterrors(Validation(values));
-    if(errors.email === "" && errors.password === ""){
-      axios.post('http://localhost:8081/user/login',values)
-        .then(res =>{
-            setAuth(res.data);
-            console.log(auth.loginSuccses);
-            if(auth.loginSuccses ==='Sucsess'){
-              navigate('/home');
-            }
-        })
-        .catch((error)=>{
-          set_erroredetails(error);
-          navigate('/error');
-        })
+  const controllSubmit=(e)=>{
+    e.preventDefault();
+    seterror(Validation(values));
+
+    if( error.email === "" && error.password ==="" ){
+      setloading(true);
+      axios.post('http://localhost:5000/user/login',values)
+      .then(res=>{
+        navigate("/home");
+      })
+      .catch(err=>{
+        if(err.response){
+          if(err.response.data.message === "User not found"){
+              alert("User not found");
+          }
+          if(err.response.data.message === "Verify email first"){
+            alert("Verify email first");
+          }
+          if(err.response.data.message === "Invalid credentials"){
+            alert("Invalid credentials");
+          }
+        }
+        console.log(err);
+      })
+      .finally(()=>{setloading(false)});
     }
   }
-  
 
   return (
     <div className="h-auto">
@@ -77,11 +79,11 @@ function Login() {
             <div className="w-[210px] h-[295px] bg-[rgb(25,31,92)] mt-[39px] rounded-[28px] m-auto flex flex-col">
                 <div className="w-[192px] h-[44px] bg-white  m-2 rounded-[72px] flex flex-raw">
                     <div className="w-[93px] h-[38px] bg-[rgb(25,31,92)] rounded-[72px] m-[3px] basis-1/2 hover:cursor-pointer">
-                      <p className="text-[14px] font-montserat mt-2 ml-5 font-black text-white">LOGIN</p>
+                      <p className="text-[14px] font-montserat mt-2 ml-5 font-black text-white cursor-pointer">LOGIN</p>
                     </div>
                     <Link to="/">
                         <div className="w-[93px] h-[38px] basis-1/2 hover:cursor-pointer">
-                          <p className="text-[rgb(25,31,92)] text-[14px] font-montserat mt-[11px] ml-[13px] font-black">RGISTER</p>
+                          <p className="text-[rgb(25,31,92)] text-[14px] font-montserat mt-[11px] ml-[13px] font-black cursor-pointer">RGISTER</p>
                         </div>
                     </Link>
                 </div>
@@ -92,8 +94,8 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><IoMdMail size={24}  color="darkblue"/></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="email" name="email" placeholder="Enter Your Email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.email}</span>
+                      <input onChange={e=> setvalues({...values,email:e.target.value})} type="email" name="email" placeholder="Enter Your Email " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{error.email}</span>
                   </div>
                 </div>
 
@@ -102,8 +104,8 @@ function Login() {
                       <div className="mt-1 ml-[6px]"><RiLockPasswordFill size={24}  color="darkblue" /></div>    
                   </div>
                   <div className="w-[133px] h-[31px] ml-1 ">
-                      <input onChange={controllInput} type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
-                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{errors.password}</span>
+                      <input onChange={e=> setvalues({...values,password:e.target.value})} type="password" name="password" placeholder="Enter password " className="w-[133px] h-[31px] rounded-e-[5px] font-montserat text-[10px] font-bold"></input>
+                      <span className=" text-[8px] absolute pb-[20px] ml-[-132px] mt-5 text-red-500">{error.password}</span>
                   </div>
                 </div>
 
@@ -119,8 +121,11 @@ function Login() {
             </div>
             <div className="m-auto w-[102px] h-[36px] ">
               <button  type="submit" name="submit" className=" w-[102px] h-[36px] bg-[rgb(25,31,92)] mt-2 rounded-full flex ">
-                  <img src={loginlogo} alt="" className="w-8 h-8 mt-[2px] ml-[3px]"/>
-                  <p className="text-white font-montserat text-[15px] font-bold mt-2 ml-1">LOGIN</p>
+                {loading ? <span className=''><div class="w-6 h-6 border-2 border-dashed rounded-full animate-spin border-white ml-[6px] mt-[6px]"></div><p  className='ml-[33px] mt-[-24px] float-right text-white'>loging...</p></span> :
+                <div className="flex"><img src={loginlogo} alt="" className="w-8 h-8 mt-[2px] ml-[3px]"/>
+                  <p className="text-white font-montserat text-[15px] font-bold mt-2 ml-1 cursor-pointer">LOGIN</p></div>
+                }
+                  
               </button>
             </div>
         </form>

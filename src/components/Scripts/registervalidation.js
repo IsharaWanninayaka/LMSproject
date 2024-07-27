@@ -13,7 +13,7 @@ function Validation(values){
     if(values.phone === ""){
         error.phone = "phone Should not be empty";
     }else if(!phone_pattern.test(values.phone)){
-        error.phone = "Phone Didn't match";
+        error.phone = "wrong phone number";
     }else{
         error.phone = "";
     }

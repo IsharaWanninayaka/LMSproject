@@ -4,7 +4,6 @@ import Home from './components/main-pages/Home.jsx';
 import Course from './components/main-pages/Course.jsx';
 import Contact from './components/main-pages/Contact.jsx';
 import Nopage from './components/main-pages/Nopage.jsx';
-import Error from './components/main-pages/Errors.jsx';
 import Register from './components/login-pages/Register.jsx';
 import Login from './components/login-pages/Login.jsx';
 import Payment from './components/main-pages/Payment.jsx';
@@ -82,7 +81,6 @@ function App() {
         <Route path="/account" element={<Account />}></Route>
         <Route path="/payment" element={<Payment />}></Route>
         <Route path="*" element={<Nopage />}></Route>
-        <Route path="/error" element={<Error />}></Route>
 
         <Route path="/registersuccess" element={<RegisterSuccess />}></Route>
         <Route path="/home" element={<Home />}></Route>
